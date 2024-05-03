@@ -42,3 +42,20 @@ function resetStopTimer() {
     var display = document.querySelector('#timer');
     display.textContent = "01:00";
 }
+
+//linea che diminuisce
+
+function countdown() {
+    let seconds = 60;
+  
+    const interval = setInterval(() => {
+      console.log(`${seconds}s`);
+      seconds--;
+  
+    if (seconds < 0) {
+        clearInterval(interval);
+    }
+  }, 1000);
+}
+  
+countdown();
