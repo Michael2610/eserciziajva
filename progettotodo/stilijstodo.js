@@ -1,21 +1,21 @@
-const Tform = document.getElementById('form')
-const Tinput = document.getElementById('input')
+const form = document.getElementById('form')
+const input = document.getElementById('input')
 const todosUL = document.getElementById('todos')
 
-const Todo = JSON.parse(localStorage.getItem('todos'))
+const todo = JSON.parse(localStorage.getItem('todos'))
 
-if(Todo) {
-    Todo.forEach(todo => addTodo(todo))
+if(todo) {
+    todo.forEach(todo => addtodo(todo))
 }
 
-Tform.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    addTodo()
+    addtodo()
 })
 
-function addTodo(todo) {
-    let todoText = Tinput.value
+function addtodo(todo) {
+    let todoText = input.value
 
     if(todo) {
         todoText = todo.text
@@ -43,7 +43,7 @@ function addTodo(todo) {
 
         todosUL.appendChild(todoEl)
 
-        Tinput.value = ''
+        input.value = ''
 
         updateLS()
     }
@@ -55,11 +55,11 @@ function updateLS() {
     const todos = []
 
     todosEl.forEach(todoEl => {
-        Todo.push({
+        todo.push({
             text: todoEl.innerText,
             completed: todoEl.classList.contains('completed')
         })
     })
 
-    localStorage.setItem('todos', JSON.stringify(Todo))
+    localStorage.setItem('todos', JSON.stringify(todo))
 }
