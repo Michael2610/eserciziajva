@@ -61,5 +61,5 @@ function updateLS() {
         })
     })
 
-    localStorage.setItem('todos', JSON.stringify(Todo))
+    
 }
