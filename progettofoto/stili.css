@@ -69,12 +69,12 @@ body::before {
 }
 
 .fonta-arrow-left:before {
-    content: "\f061";
+    content: "<";
 }
 
 
 .fonta-arrow-right:before {
-    content: "\f061";
+    content: ">";
 }
 
 .fonta, .fontas {
