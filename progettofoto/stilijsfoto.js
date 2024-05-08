@@ -3,7 +3,7 @@ const sSlide = document.querySelectorAll('.slide')
 const left = document.getElementById('left')
 const right = document.getElementById('right')
 
-let ASlide = 0
+ let ASlide = 0
 
 right.addEventListener('click', () => {
   ASlide++
